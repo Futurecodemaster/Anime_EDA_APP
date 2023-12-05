@@ -18,7 +18,7 @@ My dataset encompasses a wide array of information about anime series and movies
 ## Algorithm Description
 In developing this application, I have utilized various data processing algorithms to organize and analyze the anime data effectively. These include:
 - Data filtering and sorting based on different attributes like genre, score, and type.
-- Predictive modeling, potentially using RandomForestRegressor, to forecast trends or ratings.
+- Predictive modeling, using RandomForestRegressor, to forecast trends or ratings.
 - Sophisticated data visualization techniques to present the data in an accessible and engaging manner.
 
 ## Tools Used
