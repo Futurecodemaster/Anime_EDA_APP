@@ -20,8 +20,8 @@ My dataset encompasses a wide array of information about anime series and movies
 ## Algorithm Description
 In developing this application, I have utilized various data processing algorithms to organize and analyze the anime data effectively. These include:
 - Data filtering and sorting based on different attributes like genre, score, and type.
-- Predictive modeling, using RandomForestRegressor, to forecast trends or ratings.
-- Sophisticated data visualization techniques to present the data in an accessible and engaging manner.
+- Predictive modeling, using RandomForestRegressor, to forecast trends.
+- Data visualization techniques to present the data in an accessible and engaging manner.
 
 ## Tools Used
 For this project, I have employed several tools:
@@ -29,7 +29,7 @@ For this project, I have employed several tools:
 - **Pandas**: For data manipulation and cleaning.
 - **Matplotlib & Seaborn**: To generate static visualizations.
 - **Plotly**: For interactive and dynamic visualizations.
-- **Scikit-learn**: For implementing machine learning algorithms, if necessary.
+- **Scikit-learn**: For implementing machine learning algorithms
 - **NumPy**: For handling numerical operations.
 - I've also used additional libraries such as `streamlit_lottie` for animations and `requests` for fetching external data.
 
