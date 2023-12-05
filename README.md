@@ -1,5 +1,7 @@
 # Anime Data Analysis and Visualization Project
 
+[Check out the live app here!](https://navdeeps-eda-app.streamlit.app/)
+
 ## Abstract
 In this project, I've developed a web application using Streamlit, focusing on the analysis and visualization of a comprehensive anime dataset. My goal is to offer insights into various facets of anime, such as genres, ratings, and airing patterns. This application is designed to be an engaging tool for both anime enthusiasts and data analysts, providing interactive and in-depth exploration of anime data.
 
