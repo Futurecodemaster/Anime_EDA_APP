@@ -194,7 +194,12 @@ st.pyplot(plt)
 
 st.markdown("""
 - **The bar plot illustrates the frequency of different anime genres in the dataset.**
-- Certain genres stand out more than others, showing they're either more popular or just appear more often in anime.
+- **Comedy** is the most common type of anime, with 6029 shows, showing that a lot of anime fans like it. 
+- **Action** is the second most common, with 3888 shows, meaning many viewers enjoy exciting and action-packed anime. 
+- **Fantasy** and Adventure are also popular, with 3285 and 2957 shows. These kinds usually have creative stories full of adventures. 
+- **Anime** for kids and with music are also popular, which means there are many different kinds of fans, including young ones and those who like songs in anime. 
+- Other liked types are Drama, Sci-Fi, Shounen (for young boys), and Slice of Life, which range from everyday life stories to futuristic tales. 
+- While Comedy, Action, and Fantasy are the top choices, genres like Psychological or Horror are less common but still important, as they appeal to fans who want deeper and more intense stories. This variation highlights the diverse tastes within the anime community.
 """)
 
 
@@ -399,45 +404,98 @@ st.line_chart(type_filtered_df)
 
 
 #---------FAVORITE GENRES ANALYSIS--------------
+
+
 st.title('Favorite Genres Analysis')
 
+def split_genres(row):
+    if pd.notna(row['Genres']):
+        return row['Genres'].split(', ')
+    else:
+        return []
+
 def load_data():
-    data = pd.read_csv("anime.csv")
-    return data
+    anime_data = pd.read_csv('anime.csv')  
+    anime_data['Genre List'] = anime_data.apply(split_genres, axis=1)
+    exploded_genres = anime_data.explode('Genre List')
+    genre_favorites = exploded_genres.groupby('Genre List')['Favorites'].sum().sort_values(ascending=False)
+    return genre_favorites
 
-def plot_genres(anime_data, max_genres):
-    genre_counts = anime_data['Genres'].str.split(', ').explode().value_counts()
+def plot_genres(genre_favorites, max_genres):
 
-    genre_df = genre_counts.reset_index()
-    genre_df.columns = ['Genre', 'Count']
+    selected_genres = genre_favorites.head(max_genres).reset_index()
+    selected_genres.columns = ['Genre', 'Total Favorites']
 
-    selected_genres = genre_df.head(max_genres)
-
-    fig = px.bar(selected_genres, x='Count', y='Genre', orientation='h', 
-                 title='Favorite Genres in Anime', 
-                 labels={'Count': 'Count', 'Genre': 'Genre'},
+    fig = px.bar(selected_genres, x='Total Favorites', y='Genre', orientation='h', 
+                 title='Favorite Genres', 
+                 labels={'Total Favorites': 'Total Favorites', 'Genre': 'Genre'},
                  color='Genre',
                  color_continuous_scale=px.colors.sequential.Viridis)
-    fig.update_layout(yaxis={'categoryorder':'total ascending'})
+    fig.update_layout(
+        yaxis={'categoryorder':'total ascending'},
+        plot_bgcolor='rgba(0,0,0,0)',  
+        paper_bgcolor='rgba(0,0,0,0)', 
+        font=dict(color='white'),       
+        title_font_size=22,
+        title_font_color='black',        
+        title_font_family='Arial',
+    )
     st.plotly_chart(fig)
 
-anime_data = load_data()
+def main():
 
-max_genres = st.slider('Select the number of genres to display', 10, len(anime_data['Genres'].str.split(', ').explode().unique()), 10)
+    genre_favorites = load_data()
 
-plot_genres(anime_data, max_genres)
+    max_genres = st.slider('Select the number of genres to display', 10, 
+                           len(genre_favorites), 10)
 
+    plot_genres(genre_favorites, max_genres)
 
+if __name__ == "__main__":
+    main()
 
 st.markdown("""
-In the diverse world of anime, genres play a crucial role in defining the narrative and appeal of each series. This analysis delves into understanding which genres resonate the most with the audience. By examining the prevalence of different genres in anime, we gain insights into viewer preferences and emerging trends in the anime industry.
+In the diverse world of anime, genres play a crucial role in defining the narrative and appeal of each series. This analysis delves into understanding which genres resonate the most with the audience. This will involve examining the 'Favorites' column in relation to the genres.
+### Top 10 Most Popular Anime Genres
 
-- **Comedy** is the most common type of anime, with 6029 shows, showing that a lot of anime fans like it. 
-- **Action** is the second most common, with 3888 shows, meaning many viewers enjoy exciting and action-packed anime. 
-- **Fantasy** and Adventure are also popular, with 3285 and 2957 shows. These kinds usually have creative stories full of adventures. 
-- **Anime** for kids and with music are also popular, which means there are many different kinds of fans, including young ones and those who like songs in anime. 
-- Other liked types are Drama, Sci-Fi, Shounen (for young boys), and Slice of Life, which range from everyday life stories to futuristic tales. 
-- While Comedy, Action, and Fantasy are the top choices, genres like Psychological or Horror are less common but still important, as they appeal to fans who want deeper and more intense stories. This variation highlights the diverse tastes within the anime community.
+**Action: 4,004,199 favorites**  
+Known for its thrilling sequences and dynamic storytelling.
+
+**Comedy: 3,671,658 favorites**  
+Offers a light-hearted and entertaining experience.
+
+**Drama: 3,262,527 favorites**  
+Delivers emotionally charged and compelling narratives.
+
+**Shounen: 2,975,528 favorites**  
+Appeals with its young male-oriented themes and vibrant action.
+
+**Fantasy: 2,325,289 favorites**  
+Captivates with imaginative worlds and mystical elements.
+
+**Supernatural: 2,249,544 favorites**  
+Enthralls with its exploration of the unexplained and mystical.
+
+**Adventure: 2,226,048 favorites**  
+Entices with its tales of exploration and discovery.
+
+**Romance: 1,961,939 favorites**  
+Resonates with stories of love and relationships.
+
+**School: 1,956,912 favorites**  
+Relatable to many, showcasing life and events in a school setting.
+
+**Sci-Fi: 1,537,399 favorites**  
+Explores futuristic and technological themes.
+
+#### Conclusion:
+
+This shows us what types of stories and themes anime fans love the most. We found out that:
+
+- Exciting action, funny comedies, and deep, emotional dramas are the top favorites.
+- Genres like fantasy and adventure take viewers to amazing new worlds.
+- Romance and school life stories are loved because they talk about things many of us experience.
+- Sci-fi gets people thinking about the future and all its possibilities.
 
 """)
 
