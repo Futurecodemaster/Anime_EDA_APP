@@ -826,6 +826,11 @@ if st.button('Predict Score'):
     st.write(f'Predicted Anime Score: {predicted_score[0]:.2f}')
 
 
+lottie_coding = load_lottieurl("https://lottie.host/ea036356-04bf-41cc-8983-7cc9cb4e3083/3hPzbrsPuU.json")
+
+st_lottie(lottie_coding, height = 350, key="anime")
+
+
 
 
 
