@@ -9,6 +9,8 @@ In this project, I've developed a web application using Streamlit, focusing on t
 
 [Link to the Data Set](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020?select=anime.csv)
 
+### Data is only till 02/25/2021
+
 The dataset used in this project includes 17,558 anime titles, encompassing a wide range of genres, types (TV, Movie, OVA), viewer scores, and airing dates. The data was cleaned and preprocessed for analysis, including handling missing values, normalizing text fields, and converting data types for analysis readiness. Specifically, the 'Score' column of the dataset is converted to numeric, handling any errors with coercion. Finally, the function returns the data, dropping any rows where 'Score' or 'Type' is missing. Key attributes include anime name, genre, type, number of episodes, and viewer ratings, which were pivotal in conducting the diverse analyses presented in the web app.
 
 - **MAL_ID**: A unique identifier for each anime.
