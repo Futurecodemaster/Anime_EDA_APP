@@ -6,6 +6,9 @@
 In this project, I've developed a web application using Streamlit, focusing on the analysis and visualization of a comprehensive anime dataset. My goal is to offer insights into various facets of anime, such as genres, ratings, and airing patterns. This application is designed to be an engaging tool for both anime enthusiasts and data analysts, providing interactive and in-depth exploration of anime data. I've created two tools as well: an Anime Recommendation Tool, designed to provide anime recommendations tailored to user input, and an Anime Rating Predictor, which attempts to forecast the rating of anime titles.
 
 ## Data Description
+
+[Link to the Data Set](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020?select=anime.csv)
+
 The dataset used in this project includes 17,558 anime titles, encompassing a wide range of genres, types (TV, Movie, OVA), viewer scores, and airing dates. The data was cleaned and preprocessed for analysis, including handling missing values, normalizing text fields, and converting data types for analysis readiness. Specifically, the 'Score' column of the dataset is converted to numeric, handling any errors with coercion. Finally, the function returns the data, dropping any rows where 'Score' or 'Type' is missing. Key attributes include anime name, genre, type, number of episodes, and viewer ratings, which were pivotal in conducting the diverse analyses presented in the web app.
 
 - **MAL_ID**: A unique identifier for each anime.
