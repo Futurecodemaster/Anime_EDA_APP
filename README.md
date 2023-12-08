@@ -95,7 +95,7 @@ I'm using a variety of algorithms and data processing techniques to dive into th
 
 
 ## Tools Used
-For this project, I have employed several tools:
+For this project, I have used the following tools:
 - **Streamlit**: To create the user interface of the web application.
 - **Pandas**: For data manipulation and cleaning.
 - **Matplotlib & Seaborn**: To generate static visualizations.
