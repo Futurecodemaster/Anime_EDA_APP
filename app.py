@@ -168,7 +168,6 @@ st.line_chart(avg_score_by_year)
 st.title('Genre Analysis in Anime')
 
 st.markdown("""
-- **Now, let's analyze the genres of the anime in the dataset.**
 - **This will involve extracting genres from each title**, counting their occurrences, and visualizing the frequency of each genre.
 """)
 
