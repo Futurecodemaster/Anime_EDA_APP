@@ -46,7 +46,7 @@ The data was sourced from a CSV file containing detailed information about 17,55
 **Data Transformation:**
 
    - **Binarization**: Used MultiLabelBinarizer for transforming the `Genres` column into a binary format suitable for machine learning models.
-   - **Label Encoding**: The `Studios` column was encoded using LabelEncoder to convert studio names into a machine-readable numeric format.
+   - **Label Encoding**: The `Studios` column was encoded using LabelEncoder to convert studio names into a machine readable numeric format.
 
 
 ## Algorithm Description
