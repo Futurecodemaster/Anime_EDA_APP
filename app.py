@@ -824,7 +824,7 @@ else:
         
 #----------- ANIME RATING PREDICTOR ----------------
 
-@st.cache_data 
+@st.cache_data
 def load_data():
     df = pd.read_csv('anime.csv')
     df['Score'] = pd.to_numeric(df['Score'], errors='coerce')
@@ -834,6 +834,14 @@ def load_data():
     df['Studios'] = df['Studios'].fillna('Unknown')
     df.dropna(subset=['Score', 'Year', 'Episodes', 'Studios'], inplace=True)
     return df
+
+
+def process_input_data(df, year, episodes, genres, studio):
+    genre_encoded = mlb.transform([genres])
+    studio_encoded = le.transform([studio])[0] if studio else 0
+    input_data = np.concatenate(([year, episodes, studio_encoded], genre_encoded[0]))
+    return input_data
+
 
 df = load_data()
 
@@ -866,9 +874,7 @@ input_studio = st.selectbox('Select Studio (Optional)', options=[''] + list(le.c
 
 # Predicting the score
 if st.button('Predict Score'):
-    input_genre_encoded = mlb.transform([input_genres])
-    input_studio_encoded = le.transform([input_studio])[0] if input_studio else 0  # Default to 0 if no studio selected
-    input_data = np.concatenate(([input_year, input_episodes, input_studio_encoded], input_genre_encoded[0]))
+    input_data = process_input_data(df, input_year, input_episodes, input_genres, input_studio)
     predicted_score = model.predict([input_data])
     st.write(f'Predicted Anime Score: {predicted_score[0]:.2f}')
 
