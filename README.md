@@ -3,7 +3,9 @@
 [Check out the live app here!](https://navdeeps-eda-app.streamlit.app/)
 
 ## Abstract
-In this project, I've developed a web application using Streamlit, focusing on the analysis and visualization of a comprehensive anime dataset. My goal is to offer insights into various facets of anime, such as genres, ratings, and airing patterns. This application is designed to be an engaging tool for both anime enthusiasts and data analysts, providing interactive and in-depth exploration of anime data. I've created two tools as well: an Anime Recommendation Tool, designed to provide anime recommendations tailored to user input, and an Anime Rating Predictor, which attempts to forecast the rating of anime titles.
+The main purpose of my project was to create an interactive web application for analyzing and visualizing anime data. Using Streamlit, I developed a platform where users can explore various aspects of anime, such as genres, popularity trends, and viewer ratings. The app successfully integrates Python libraries like Pandas, NumPy, and Scikit-learn for processing large datasets and implementing machine learning for features like anime rating prediction.
+
+From this project, I achieved an engaging and user friendly application that offers personalized anime recommendations and insights into viewer behavior.
 
 ## Data Description
 
@@ -11,7 +13,7 @@ In this project, I've developed a web application using Streamlit, focusing on t
 
 ### Data is only till 02/25/2021
 
-The dataset used in this project includes 17,558 anime titles, encompassing a wide range of genres, types (TV, Movie, OVA), viewer scores, and airing dates. The data was cleaned and preprocessed for analysis, including handling missing values, normalizing text fields, and converting data types for analysis readiness. Specifically, the 'Score' column of the dataset is converted to numeric, handling any errors with coercion. Finally, the function returns the data, dropping any rows where 'Score' or 'Type' is missing. Key attributes include anime name, genre, type, number of episodes, and viewer ratings, which were pivotal in conducting the diverse analyses presented in the web app.
+The data was sourced from a CSV file containing detailed information about 17,558 anime titles. It included following attributes:
 
 - **MAL_ID**: A unique identifier for each anime.
 - **Name**: The title of the anime.
@@ -34,9 +36,22 @@ The dataset used in this project includes 17,558 anime titles, encompassing a wi
 - **Watching**, **Completed**, **On-Hold**, **Dropped**, **Plan to Watch**: The number of users in each viewing status category.
 - **Score-10** to **Score-1**: The number of users that have given each score from 10 to 1.
 
+**Data Cleaning and Preprocessing:**
+
+   - **Missing Values**: I handled missing data, particularly in fields like `Score`, `Type`, and `Genres`. Rows with missing scores were dropped to maintain analysis integrity.
+   - **Type Conversion**: Certain columns like `Score` and `Episodes` were converted to numeric types to facilitate statistical analysis.
+   - **Date Handling**: The `Aired` column was processed to extract the year, which was essential for trend analysis over time.
+   - **Genre Processing**: The `Genres` column, containing comma separated values, was split and restructured for genre based analysis.
+
+**Data Transformation:**
+
+   - **Binarization**: Used MultiLabelBinarizer for transforming the `Genres` column into a binary format suitable for machine learning models.
+   - **Label Encoding**: The `Studios` column was encoded using LabelEncoder to convert studio names into a machine-readable numeric format.
+
+
 ## Algorithm Description
 
-In this project, I'm using a variety of algorithms and data processing techniques to dive into the fascinating world of anime data. Let me break down for you how each algorithm works, the way I've applied them, and how they're each contributing something special to this project.
+I'm using a variety of algorithms and data processing techniques to dive into the fascinating world of anime data. Let me break down for you how each algorithm works, the way I've applied them, and how they're each contributing something special to this project.
 
 ### 1. Random Forest Regressor
 - **Purpose**: Used for predicting the rating of an anime based on various features.
