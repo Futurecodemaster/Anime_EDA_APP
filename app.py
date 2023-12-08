@@ -541,7 +541,7 @@ The scatter plot visualizes the relationship between anime scores and their popu
 - The correlation coefficient between the score and the number of members is approximately `0.41`, indicating a moderate positive correlation.
 - This suggests that, generally, anime with higher scores tend to be more popular, attracting more members. However, the correlation is not strong enough to imply a direct or consistent relationship.
 
-### Key Observations
+### Observations
 - There are many data points clustered at the lower end of the member count, indicating numerous anime with varying scores but lower popularity.
 - Anime with very high scores (above 8) also tend to have a large number of members, supporting the idea that high-quality anime attracts more viewers.
 - It's important to note that outliers and exceptions exist. Some anime with high scores might not have gained widespread popularity, and conversely, some with lower scores might be surprisingly popular due to factors like niche appeal or cult following.
@@ -621,7 +621,7 @@ The scatter plot with a logarithmic scale on the x-axis (number of episodes) sho
 - **Correlation Coefficient**: Approximately `0.09`.
 - This indicates a very weak positive correlation, suggesting that there isn't a strong or consistent relationship between the length of an anime series and its overall score.
 
-### Key Observations
+### Observations
 -  A significant number of anime have a low number of episodes, with a wide range of scores. This cluster indicates that short series can vary greatly in quality.
 - There are fewer anime with a very high episode count. While some of these longer series have high scores, the correlation is not strong enough to suggest a definitive trend.
 - The weak correlation implies that the number of episodes is not a significant factor in determining the quality or appeal of an anime. Other factors like story, character development, and production quality might play more pivotal roles.
@@ -695,7 +695,7 @@ This analysis focuses on the distribution of various genres across different typ
 #### Specials and ONAs (Original Net Animation)
 - Feature a variety of genres, though in smaller counts compared to TV series and movies.
 
-### Key Insights
+### Observations
 - Adventure and Mystery stories are really liked in all types of anime. They seem to be favorites for a lot of people.
 - This shows that some types of stories are popular in all kinds of anime, but others are more special and fit better in certain types like movies or TV shows.
 - Knowing what stories work best in each type of anime can help people who make and share anime decide what to make next
@@ -746,7 +746,7 @@ The bar plot illustrates the distribution of member engagement across different 
 - **Watching (39,189,388 members)**: Represents the currently active viewership, indicating ongoing engagement with airing or selected series.
 - **Dropped (20,663,441 members)** and **On-Hold (16,772,582 members)**: While lower compared to other categories, these numbers are still notable, suggesting that a considerable number of viewers pause or discontinue series for various reasons.
 
-### Key Insights
+### Observations
 
 - **High Completion Rate**: The high number of completed series underscores a dedicated and engaged anime community.
 - **Plans to Watch**: The substantial "Plan to Watch" numbers indicate a continuous interest in exploring new or different anime series.
