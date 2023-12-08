@@ -35,10 +35,49 @@ The dataset used in this project includes 17,558 anime titles, encompassing a wi
 - **Score-10** to **Score-1**: The number of users that have given each score from 10 to 1.
 
 ## Algorithm Description
-In developing this application, I have utilized various data processing algorithms to organize and analyze the anime data effectively. These include:
-- Data filtering and sorting based on different attributes like genre, score, and type.
-- Predictive modeling, using RandomForestRegressor, to forecast trends.
-- Data visualization techniques to present the data in an accessible and engaging manner.
+
+In this project, I'm using a variety of algorithms and data processing techniques to dive into the fascinating world of anime data. Let me break down for you how each algorithm works, the way I've applied them, and how they're each contributing something special to this project.
+
+### 1. Random Forest Regressor
+- **Purpose**: Used for predicting the rating of an anime based on various features.
+- **Application**: Implemented in the "Anime Rating Predictor" section.
+- **Details**: This machine learning model is adept at handling a mix of categorical and numerical features and is used to estimate anime ratings.
+
+### 2. MultiLabelBinarizer
+- **Purpose**: To encode multiple labels per instance in the 'Genres' feature.
+- **Application**: Utilized during data preprocessing in the "Anime Rating Predictor" section.
+- **Details**: Transforms the genre labels into a binary matrix, preparing them for use in the machine learning model.
+
+### 3. LabelEncoder
+- **Purpose**: Encoding categorical data, specifically the 'Studio' feature.
+- **Application**: In the "Anime Rating Predictor" for data preprocessing.
+- **Details**: Converts studio names into numerical values, enabling their use in the prediction model.
+
+### 4. Train-Test Split (train_test_split)
+- **Purpose**: Splitting the dataset into training and testing sets for model validation.
+- **Application**: Used in the "Anime Rating Predictor" section for model training and validation.
+- **Details**: A critical step in machine learning to evaluate the model's performance on unseen data.
+
+### 5. Correlation Calculation (corr)
+- **Purpose**: To calculate the correlation coefficient between pairs of variables.
+- **Application**: In sections like "Correlation between Anime Score and Popularity" and "Correlation between Number of Episodes and Anime Score".
+- **Details**: Helps in understanding the strength and direction of linear relationships between variables.
+
+### 6. Plotly Express (px)
+- **Purpose**: For creating interactive data visualizations.
+- **Application**: Used across various sections for enhanced data visualization.
+- **Details**: Enables the creation of dynamic, interactive graphs that improve user engagement and data interpretation.
+
+### 7. Seaborn and Matplotlib (sns, plt)
+- **Purpose**: For creating static data visualizations.
+- **Application**: Throughout the application for plotting various types of graphs.
+- **Details**: These libraries are essential for depicting data distributions, trends, and statistical insights in a visually appealing manner.
+
+### 8. Pandas Descriptive Statistics (describe)
+- **Purpose**: To generate summary statistics of data distributions.
+- **Application**: In "General Statistics" and "Episode Count Analysis".
+- **Details**: Provides a quick overview of the dataset, including measures like mean, standard deviation, min/max values, and quantiles.
+
 
 ## Tools Used
 For this project, I have employed several tools:
