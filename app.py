@@ -406,7 +406,7 @@ st.line_chart(type_filtered_df)
 #---------FAVORITE GENRES ANALYSIS--------------
 
 
-st.title('Favorite Genres Analysis')
+st.title('Favorite Genres')
 
 def split_genres(row):
     if pd.notna(row['Genres']):
@@ -429,6 +429,7 @@ def plot_genres(genre_favorites, max_genres):
     fig = px.bar(selected_genres, x='Total Favorites', y='Genre', orientation='h', 
                  title='Top 10 Favorite Genres', 
                  labels={'Total Favorites': 'Total Favorites', 'Genre': 'Genre'},
+                 text='Total Favorites',
                  color='Genre',
                  color_continuous_scale=px.colors.sequential.Viridis)
     fig.update_layout(
