@@ -51,7 +51,7 @@ The data was sourced from a CSV file containing detailed information about 17,55
 
 ## Algorithm Description
 
-I'm using a variety of algorithms and data processing techniques to dive into the fascinating world of anime data. Let me break down for you how each algorithm works, the way I've applied them, and how they're each contributing something special to this project.
+I'm using a variety of algorithms and data processing techniques. Let me break down for you how each algorithm works, the way I've applied them, and how they're each contributing something special to this project.
 
 ### 1. Random Forest Regressor
 - **Purpose**: Used for predicting the rating of an anime based on various features.
