@@ -427,7 +427,7 @@ def plot_genres(genre_favorites, max_genres):
     selected_genres.columns = ['Genre', 'Total Favorites']
 
     fig = px.bar(selected_genres, x='Total Favorites', y='Genre', orientation='h', 
-                 title='Favorite Genres', 
+                 title='Top 10 Favorite Genres', 
                  labels={'Total Favorites': 'Total Favorites', 'Genre': 'Genre'},
                  color='Genre',
                  color_continuous_scale=px.colors.sequential.Viridis)
@@ -457,25 +457,25 @@ st.markdown("""
 In the diverse world of anime, genres play a crucial role in defining the narrative and appeal of each series. This analysis delves into understanding which genres resonate the most with the audience. This will involve examining the 'Favorites' column in relation to the genres.
 ### Top 10 Most Popular Anime Genres
 
-**Action: 4,004,199 favorites**  
+**Action**: 4,004,199 favorites  
 
-**Comedy: 3,671,658 favorites**  
+**Comedy**: 3,671,658 favorites 
 
-**Drama: 3,262,527 favorites**  
+**Drama**: 3,262,527 favorites
 
-**Shounen: 2,975,528 favorites**  
+**Shounen**: 2,975,528 favorites
 
-**Fantasy: 2,325,289 favorites**  
+**Fantasy**: 2,325,289 favorites
 
-**Supernatural: 2,249,544 favorites**  
+**Supernatural**: 2,249,544 favorites
 
-**Adventure: 2,226,048 favorites**  
+**Adventure**: 2,226,048 favorites
 
-**Romance: 1,961,939 favorites**  
+**Romance**: 1,961,939 favorites
 
-**School: 1,956,912 favorites**  
+**School**: 1,956,912 favorites
 
-**Sci-Fi: 1,537,399 favorites**  
+**Sci-Fi**: 1,537,399 favorites
 
 #### Conclusion:
 
