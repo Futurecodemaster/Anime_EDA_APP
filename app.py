@@ -127,7 +127,7 @@ filtered_data = df[df['Score'].between(min_score, max_score)]
 
 # Plotting the distribution of scores
 plt.figure(figsize=(10, 4))
-sns.histplot(filtered_data['Score'], bins=30, kde=True)
+sns.histplot(filtered_data['Score'], bins=30, kde=True, color='#7F7FFF')
 plt.title('Score Distribution')
 plt.xlabel('Score')
 plt.ylabel('Frequency')
