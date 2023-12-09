@@ -435,8 +435,7 @@ def plot_genres(genre_favorites, max_genres):
         yaxis={'categoryorder':'total ascending'},
         plot_bgcolor='rgba(0,0,0,0)',  
         paper_bgcolor='rgba(0,0,0,0)',      
-        title_font_size=22,
-        title_font_color='black',        
+        title_font_size=22,      
         title_font_family='Arial',
     )
     st.plotly_chart(fig)
