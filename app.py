@@ -135,9 +135,9 @@ st.pyplot(plt)
 
 st.markdown("""
 ### Score Distribution Analysis
-- **The distribution of anime scores shows a roughly bell-shaped curve, indicating a normal distribution.**
-- **Most scores are clustered around the mean of 6.51**, with fewer titles receiving extremely high or low scores.
-- **This suggests a general consistency in the scoring of anime titles.**
+- The distribution of anime scores shows a roughly bell-shaped curve, indicating a normal distribution.
+- Most scores are clustered around the **mean of 6.51**, with fewer titles receiving extremely high or low scores.
+- This suggests a general consistency in the scoring of anime titles.
 """)
 
 # TRENDS
@@ -208,7 +208,7 @@ st.markdown("""
 st.title('Anime Types Distribution')
 
 st.markdown("""
-- **Next, we will explore the distribution of various anime formats, including TV series, movies, and more.**
+- **Here, we will explore the distribution of various anime formats, including TV series, movies, and more.**
 - **This analysis aims to understand the composition of the dataset in terms of anime formats.** It will provide insights into which formats are more commonly represented and potentially indicate trends in anime production.
 - **By exploring this aspect, we'll gain a clearer picture of the anime landscape** as captured in the dataset.
 """)
@@ -239,7 +239,7 @@ st.markdown("""
 st.title('Episode Count Analysis in Anime')
 
 st.markdown("""
-- **Now, let's take a closer look into the range of episode counts across the dataset.**
+- **Let's take a closer look into the range of episode counts across the dataset.**
 - This analysis help us figure out how long most anime shows are. We want to know how many episodes are usual for different kinds of anime. By looking at this, we can learn more about how anime stories are told and made.
 """)
 
