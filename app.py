@@ -511,7 +511,7 @@ st.markdown("""
             """)
 
 def load_data():
-    data = pd.read_csv("anime.csv")  # Change to your file path
+    data = pd.read_csv("anime.csv")  
     data['Score'] = pd.to_numeric(data['Score'], errors='coerce')
     return data
 
@@ -588,7 +588,7 @@ st.markdown("""
 
 
 def load_data():
-    data = pd.read_csv("anime.csv")  # Change to your file path
+    data = pd.read_csv("anime.csv") 
     data['Score'] = pd.to_numeric(data['Score'], errors='coerce')
     data['Episodes'] = pd.to_numeric(data['Episodes'], errors='coerce')
     return data
